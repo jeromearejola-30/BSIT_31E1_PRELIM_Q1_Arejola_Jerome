@@ -1,0 +1,18 @@
+Why did you use inheritance?
+ans. Because of the "IS-A" relationship. A car, a plane, and a boat are all fundamentally vehicles. 
+By using inheritance with a base Vehicle class, we can group them all together in a single list and share common code without copying and pasting it everywhere.
+
+Why did you use interfaces?
+ans.Because of the "CAN-DO" relationship. Not every vehicle can do the same things—cars can't fly, and planes don't sail. 
+Interfaces like IDriveable or IFlyable let us give specific abilities only to the vehicles that actually need them.
+
+Could Helicopter inherit from both Vehicle and Airplane? Why or why not?
+ans.No. C# doesn't allow a class to inherit from more than one parent class. 
+If it did, the code would get messy and confused (a problem known as the "Diamond Problem") trying to figure out which parent's code to run.
+
+Why can Helicopter implement both IFlyable and IDriveable?
+ans.While C# only lets you inherit from one class, it lets you use as many interfaces as you want. 
+Since interfaces are just a checklist of abilities with no built-in code, the Helicopter can easily implement both without causing any confusion for the compiler.
+
+If a Submarine can both sail and dive, how would you design it?
+ans.I would make the Submarine class inherit from Vehicle, implement the existing ISailable interface, and create a brand-new IDiveable interface for its diving ability.
